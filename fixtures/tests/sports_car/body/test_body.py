@@ -4,7 +4,8 @@ from pytest import mark
 @mark.body
 class BodyTest:
     @mark.door
-    def test_body(selfzzz):
+    def test_body(self, chrome_browser):
+        chrome_browser.get('https://www.google.com')
         assert True
     
     def test_bumper(self):
